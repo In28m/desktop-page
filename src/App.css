@@ -102,7 +102,8 @@ button:hover {
 .card-2:hover,
 .card-3:hover,
 .card-4:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
+  background-color: red;
   box-shadow: 0 0 10px 0 #2388ce;
 }
 
@@ -126,4 +127,51 @@ button:hover {
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    order: 1;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+
+  a,
+  button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; 
+  }
+
+  .container-card .card-1,
+  .container-card .card-2,
+  .container-card .card-3,
+  .container-card .card-4 {
+    margin: 10px 0;
+  }
+}
 
